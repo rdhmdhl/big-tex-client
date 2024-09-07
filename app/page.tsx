@@ -63,7 +63,7 @@ export default function Home() {
     <div 
       className="home-container w-screen h-screen flex flex-col bg-cover bg-center"
       style={{
-        backgroundImage: "url('/text-background.jpg')",
+        backgroundImage: "url('/text-background.webp')",
         backgroundAttachment: "fixed", // This will make the background image stay fixed
     }}
     >
