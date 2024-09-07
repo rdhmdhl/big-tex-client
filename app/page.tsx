@@ -73,7 +73,7 @@ export default function Home() {
         height={500}
       />
       {/* content */}
-      <div className="topbar mb-20">
+      <div className="topbar mb-20 z-100">
         <TopBar></TopBar>
       </div>
 
