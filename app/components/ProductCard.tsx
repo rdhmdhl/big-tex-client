@@ -11,14 +11,14 @@ interface ProductCardProps {
 
 const ProductCard = ({ img, isActive, initialLoad }: ProductCardProps) => {
   return (
-    <div className='product-card-container'>
+    <div className='product-card-container w-full h-full mb-44'>
         <Image
           src={img}
           alt='hoodie'
-          width={1000}
-          height={1000}
+          width={500}
+          height={500}
           className={`transition-transform duration-1000 ease-in-out ${
-            isActive || initialLoad ? "scale-125" : "scale-100"
+            isActive || initialLoad ? "scale-125" : "scale-105"
           } object-contain`}
         />
     </div>

@@ -63,24 +63,22 @@ export default function Home() {
 
 
   return (
-    <div className="home-container w-screen h-screen flex flex-col">
-      {/* background image */}
-      <Image
-        className="object-cover object-center fixed top-0 left-0 w-full h-full -z-10"
-        alt="background-image"
-        src="/text-background.jpg"
-        width={500}
-        height={500}
-      />
+    <div 
+      className="home-container w-screen h-screen flex flex-col bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/text-background.jpg')",
+        backgroundAttachment: "fixed", // This will make the background image stay fixed
+    }}
+    >
       {/* content */}
-      <div className="topbar mb-20 z-100">
+      <div className="topbar-main-container w-full z-100 fixed top-0 left-0">
         <TopBar></TopBar>
       </div>
 
-      <div className="products-container mt-10">
+      <div className="products-container mt-10 overflow-y-scroll">
         {[ "/Hoodie-F.png", "/FPant-F.png", "/SL-Pant-F.png" ].map((img, index) => (
           <div
-          className="product-card-mapper w-full mb-10 h-[800px]"
+          className="product-card-mapper w-full h-auto mb-10 flex"
             key={index}
             ref={(el) => {
               cardRefs.current[index] = el!
