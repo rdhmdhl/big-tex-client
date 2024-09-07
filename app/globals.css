@@ -13,10 +13,30 @@
 }
 
 
-body {
-  color: rdb(var(--foreground-rgb));
-  /* padding: 1rem; */
+@layer base {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  body {
+    @apply flex flex-col items-center justify-center; /* Use Tailwind classes */
+  }
+  .scroll-snap-container {
+    scroll-snap-type: y mandatory; /* Enable vertical snapping */
+    overflow-y: scroll; /* Allow vertical scrolling */
+  }
+
+  .scroll-snap-child {
+    scroll-snap-align: center; /* Align items to the center when scrolling */
+  }
 }
+
+
 
 @layer utilities {
   .text-balance {
