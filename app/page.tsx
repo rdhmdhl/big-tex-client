@@ -68,13 +68,13 @@ export default function Home() {
     }}
     >
       {/* content */}
-      <div className="topbar-main-container w-full z-100 fixed top-0 left-0">
+      <div className="topbar-main-container w-full ">
         <TopBar></TopBar>
       </div>
 
       <div className="products-container flex flex-col pt-[8rem] overflow-y-scroll overflow-x-hidden">
 
-        {[ "/Hoodie-F.png", "/FPant-F.png", "/SL-Pant-F.png" ].map((img, index) => (
+        {[ "/Hoodie-F.webp", "/FPant-F.webp", "/SL-Pant-F.webp" ].map((img, index) => (
           <div
           className="product-card-mapper w-full h-auto mb-44 flex"
             key={index}
