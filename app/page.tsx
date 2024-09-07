@@ -68,9 +68,7 @@ export default function Home() {
     }}
     >
       {/* content */}
-      <div className="topbar-main-container w-full ">
-        <TopBar></TopBar>
-      </div>
+      <TopBar></TopBar>
 
       <div className="products-container flex flex-col pt-[8rem] overflow-y-scroll overflow-x-hidden">
 
