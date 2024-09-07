@@ -7,14 +7,11 @@ import { useEffect, useRef, useState } from "react";
 export default function Home() {
   // State to track the active card
   const [activeCard, setActiveCard] = useState(-1);
-  const [loaded, setLoaded] = useState(false); // To handle the initial load animation
   const cardRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     // Ensure this code runs only on the client side
     if (typeof window === "undefined") return;
-
-    setTimeout(() => setLoaded(true), 100);
 
     // Callback for intersection observer
     const callback: IntersectionObserverCallback = (entries) => {
@@ -44,7 +41,7 @@ export default function Home() {
     // Intersection Observer configuration
     const observer = new IntersectionObserver(callback, {
       root: null, // Use the viewport as the root
-      threshold: .5
+      threshold: 1.0
     });
 
     // Observe each card
@@ -75,10 +72,11 @@ export default function Home() {
         <TopBar></TopBar>
       </div>
 
-      <div className="products-container mt-10 overflow-y-scroll">
+      <div className="products-container flex flex-col pt-[8rem] overflow-y-scroll overflow-x-hidden">
+
         {[ "/Hoodie-F.png", "/FPant-F.png", "/SL-Pant-F.png" ].map((img, index) => (
           <div
-          className="product-card-mapper w-full h-auto mb-10 flex"
+          className="product-card-mapper w-full h-auto mb-44 flex"
             key={index}
             ref={(el) => {
               cardRefs.current[index] = el!
@@ -87,7 +85,6 @@ export default function Home() {
             <ProductCard 
               img={img} 
               isActive={activeCard === index} 
-              initialLoad={index === 0 && loaded}
               />
           </div>
         ))}

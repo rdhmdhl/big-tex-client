@@ -26,14 +26,6 @@
   body {
     @apply flex flex-col items-center justify-center; /* Use Tailwind classes */
   }
-  .scroll-snap-container {
-    scroll-snap-type: y mandatory; /* Enable vertical snapping */
-    overflow-y: scroll; /* Allow vertical scrolling */
-  }
-
-  .scroll-snap-child {
-    scroll-snap-align: center; /* Align items to the center when scrolling */
-  }
 }
 
 
