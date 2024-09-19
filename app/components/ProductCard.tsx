@@ -5,10 +5,9 @@ import Image from 'next/image';
 
 interface ProductCardProps {
   img: string;
-  isActive: boolean;
 }
 
-const ProductCard = ({ img, isActive }: ProductCardProps) => {
+const ProductCard = ({ img }: ProductCardProps) => {
 
   return (
     <div className='product-card-container w-full h-full justify-center'>
@@ -17,9 +16,6 @@ const ProductCard = ({ img, isActive }: ProductCardProps) => {
           alt='hoodie'
           width={500}
           height={500}
-          className={`transition-transform duration-1000 ease-in-out ${
-            isActive? "scale-110" : "scale-100"
-          } object-contain`}
         />
     </div>
   )
