@@ -8,9 +8,9 @@ export default function Home() {
 
   return (
     <div 
-      className="home-container w-screen h-screen flex flex-col bg-cover bg-center"
+      className="home-container w-screen h-screen flex flex-col bg-cover bg-center pt-[8rem]"
     >
-      <div className="products-container flex flex-col pt-[4rem] pb-[10rem] overflow-y-scroll overflow-x-hidden">
+      <div className="products-container flex flex-col pb-[10rem] overflow-y-scroll overflow-x-hidden">
         <div className="flex flex-col" onClick={() => router.push('products/hoodie')}>
             <Image 
               src="/Hoodie-F-Resized.webp"

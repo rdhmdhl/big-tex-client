@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
 import { Mitr } from 'next/font/google';
 import "./styles/globals.css";
 import TopBar from "./components/TopBar";
+import { Providers } from "./context/providers";
 
 const mitr = Mitr({
   weight: ['200', '300', '400', '500', '600', '700'],
@@ -22,8 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`h-full w-full ${mitr.className}`}>{children}
-        <TopBar/>
+      <body className={`h-full w-full ${mitr.className}`}>
+        <Providers>
+          <TopBar/>
+          {children}
+        </Providers>
       </body>
     </html>
   );
