@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div 
-      className="home-container w-screen h-screen flex flex-col bg-cover bg-center pt-[8rem]"
+      className="home-container w-screen h-screen flex flex-col bg-cover bg-center pt-[4rem]"
     >
       <div className="products-container flex flex-col pb-[10rem] overflow-y-scroll overflow-x-hidden">
         <div className="flex flex-col" onClick={() => router.push('products/hoodie')}>

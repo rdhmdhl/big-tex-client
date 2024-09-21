@@ -26,7 +26,7 @@ export const productData: Record<string, Product> = {
       price: 250,
       size: ProductSize.Medium,
       description: "Description of Product 3",
-      mainImage: "/SLPant-F.webp",
+      mainImage: "/SL-Pant-F.webp",
       detailImages: ["/Hoodie-B.webp", "/Hoodie-Detail.webp"],
     },
   };
