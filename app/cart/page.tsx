@@ -19,7 +19,7 @@ export default function Cart() {
     <div className="cart-page flex flex-col justify-start items-center h-full w-full mt-[5rem]">
       <h2 className="text-xl font-semibold">Your Cart</h2>
       {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <p>is empty.</p>
       ) : (
         <div className="w-3/4">
           {cart.map((item) => (
@@ -34,16 +34,19 @@ export default function Cart() {
             ))}
         </div>
       )}
-      <div className="totals-container flex flex-col justify-start w-3/4">
-        <div className="shipping-price-container flex justify-between">
-            <p>Shipping</p>
-            <p>$0</p>
+
+      {cart.length > 0 && 
+        <div className="totals-container flex flex-col justify-start w-3/4">
+          <div className="shipping-price-container flex justify-between">
+              <p>Shipping</p>
+              <p>$0</p>
+          </div>
+          <div className="total-price-container flex justify-between">
+              <p>Total</p>
+              <p>${totalPrice}</p>
+          </div>
         </div>
-        <div className="total-price-container flex justify-between">
-            <p>Total</p>
-            <p>${totalPrice}</p>
-        </div>
-      </div>
+      }
     </div>
   );
 }

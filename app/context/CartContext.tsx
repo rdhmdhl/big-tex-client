@@ -19,7 +19,6 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     const [cart, setCart] = useState<Product[]>([]);
 
     const addToCart = (product: Product) => {
-        console.log("adding item to cart: ", product);
         setCart((prevCart) => [...prevCart, product]);
     };
 

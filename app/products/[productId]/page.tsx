@@ -15,6 +15,8 @@ export default function ProductPage({
   const { productId } = params;
   const product = productData[productId];
   const [selectedSize, setSelectedSize] = useState<ProductSize | null>(null);
+  const [selectedImage, setSelectedImage] = useState(product.mainImage);
+  const [availableImages, setAvailableImages] = useState(product.detailImages);
 
   if (!product) {
     return <div>Product not found</div>;
@@ -30,25 +32,36 @@ export default function ProductPage({
     addToCart({ ...product, size: selectedSize });
   };
 
+  const updateSelectedImage = (image: string) => {
+    // Replace the clicked image with the current main image in the available images
+    const newImages = availableImages.map((img) => (img === image ? selectedImage : img));
+
+    setAvailableImages(newImages);
+    setSelectedImage(image);
+  };
+
   return (
     <div className="product-page-container relative pb-[80px]">
     <div className="pt-[7rem] p-4 h-screen">
-      <Image
-        src={product.mainImage}
-        alt="pants image"
-        width={500}
-        height={500}
-        className="border-solid border border-black bg-neutral-200"
-      />
-      <div className="detail-images flex space-x-4 mt-4">
-        {product.detailImages.map((imageSrc, index) => (
+      <div className="main-image-container flex justify-end w-[350px] h-[350px] bg-neutral-200">
+        <Image
+          src={selectedImage}
+          alt="pants image"
+          width={350}
+          height={350}
+          className="object-cover bg-neutral-200"
+        />
+      </div>
+      <div className="detail-images flex justify-start space-x-4 mt-4 w-[100px] h-[100px]">
+        {availableImages.map((imageSrc, index) => ( 
           <Image
             key={index}
             src={imageSrc}
             alt={`${product.name} detail image ${index + 1}`}
             width={100}
             height={100}
-            className="border-solid border border-black bg-neutral-200 object-cover"
+            className="bg-neutral-200 object-cover"
+            onClick={() => updateSelectedImage(imageSrc)}
           />
         ))}
       </div>

@@ -18,7 +18,7 @@ const AddToCart = ({ addItem, product }: AddToCartProps) => {
       </button>
       <button
         className="p-4 border border-black w-2/4 m-2 text-lg"
-        onClick={() => console.log("added to cart")}
+        onClick={() => console.log("Buy Now")}
       >
         BUY NOW
       </button>
