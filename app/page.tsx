@@ -1,5 +1,4 @@
 'use client';
-import TopBar from "./components/TopBar";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -11,7 +10,7 @@ export default function Home() {
       className="home-container w-screen h-screen flex flex-col bg-cover bg-center pt-[4rem]"
     >
       <div className="products-container flex flex-col pb-[10rem] overflow-y-scroll overflow-x-hidden">
-        <div className="flex flex-col" onClick={() => router.push('products/hoodie')}>
+        <div className="flex flex-col" onClick={() => router.push('products/Pull-Over')}>
             <Image 
               src="/Hoodie-F-Resized.webp"
               alt='hoodie'

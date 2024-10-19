@@ -1,7 +1,7 @@
 import { Product, ProductSize } from '@/types/Product';
 
 export const productData: Record<string, Product> = {
-    hoodie: {
+    "Pull-Over": {
       name: "Pull Over",
       id: 1,
       price: 250,

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Mitr } from 'next/font/google';
+import { Reddit_Mono } from 'next/font/google';
 import "./styles/globals.css";
 import TopBar from "./components/TopBar";
 import { Providers } from "./context/providers";
 
-const mitr = Mitr({
+const reddit_mono = Reddit_Mono({
   weight: ['200', '300', '400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
@@ -26,7 +26,7 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <title>Big Texas Ent</title>
       </head>
-      <body className={`h-full w-full ${mitr.className}`}>
+      <body className={`h-full w-full ${reddit_mono.className}`}>
         <Providers>
           <TopBar/>
           {children}

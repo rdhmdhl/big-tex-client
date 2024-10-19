@@ -1,0 +1,33 @@
+
+:global(.size-icon) .dashed-path {
+    fill: green;
+    stroke: gray;
+    stroke-width: 3;
+    stroke-dasharray: 7, 5;
+  }
+  
+  :global(.size-icon.animated) .dashed-path {
+    fill: blue;
+    stroke: black;
+  }
+  
+  :global(.size-icon) .overlay-path {
+    fill: red;
+    stroke: white;
+    stroke-width: 10;
+    stroke-dasharray: 500; /* Replace with actual path length */
+    stroke-dashoffset: 0;
+  }
+  
+  :global(.size-icon.animated) .overlay-path {
+    animation: dash 1s linear forwards;
+  }
+  
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 500; /* Replace with actual path length */
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }

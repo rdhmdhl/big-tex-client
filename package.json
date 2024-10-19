@@ -10,10 +10,12 @@
     "test-selenium": "node scripts/emulateMobileDevice.js"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
     "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.1.0"
+    "react-icons": "^5.1.0",
+    "string-hash": "^1.1.3"
   },
   "devDependencies": {
     "@types/node": "^20",

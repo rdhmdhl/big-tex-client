@@ -1,5 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap'); */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,6 +17,7 @@
   html,
   body {
     @apply h-full w-full font-sans;
+    @apply bg-black;
     overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
@@ -32,5 +31,226 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+
+.custom-button-lg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #7e97b8;
+  background-color: #e0e8ef;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: rgba(255, 255, 255, 0.333);
+  border-radius: 40px 40px 40px 40px;
+  padding: 16px 24px 16px 28px;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: 0.2s;
+  box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+  width: 90%;
+}
+
+.custom-button-lg:hover {
+  color: #516d91;
+  background-color: #E5EDF5;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+ }
+ 
+
+ .custom-button-lg:active {
+  color: #516d91;
+  background-color: #E5EDF5;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+ }
+
+/* size icon classes and animations */
+
+/* CTA Buttons */
+.addCartDashedPathGray {
+  fill: none;
+  stroke: rgba(203, 203, 203, 0.485);
+  stroke-width: 2;
+  stroke-dasharray: 15, 3; 
+  overflow: visible;
+}
+
+.addCartDashedPath {
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 2;
+  stroke-dasharray: 15, 3;
+  overflow: visible;
+}
+
+.addCartOverlayPath {
+  fill: none;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 3;
+  stroke-dasharray: 471.2371826171875;
+  stroke-dashoffset: 0;
+}
+
+.cta-animated-path {
+  animation: cta-dash .5s linear forwards;
+}
+
+@keyframes cta-dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 942.474365234375;
+  }
+}
+
+
+
+/* Small */
+.small-dashed-path-gray {
+  fill: none;
+  stroke: rgba(203, 203, 203, 0.485);
+  stroke-width: 0.9;
+  stroke-dasharray: 4.5, 1;
+}
+
+.small-dashed-path {
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 0.9;
+  stroke-dasharray: 4.5, 1;
+}
+
+.small-overlay-path {
+  fill: none;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 3;
+  stroke-dasharray: 165;
+  stroke-dashoffset: 0;
+}
+
+.small-animated-path {
+  animation: small-dash 1s linear forwards;
+}
+
+@keyframes small-dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 165;
+  }
+}
+
+/* Medium Size Icon */
+.medium-dashed-path-gray {
+  fill: none;
+  stroke: rgba(203, 203, 203, 0.485);
+  stroke-width: .9;
+  stroke-dasharray: 4.5, 1;
+}
+
+.medium-dashed-path {
+  fill: none;
+  stroke: white;
+  stroke-width: .9;
+  stroke-dasharray: 4.5, 1;
+}
+
+.medium-overlay-path {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+  stroke-dasharray: 268.4200744628906;
+  stroke-dashoffset: 0;
+}
+
+.medium-animated-path {
+  animation: medium-dash 1s linear forwards;
+}
+
+@keyframes medium-dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 268.4200744628906;
+  }
+}
+/* Large Size Icon */
+.large-dashed-path-gray {
+  fill: none;
+  stroke: rgba(203, 203, 203, 0.485);
+  stroke-width: 1;
+  stroke-dasharray: 4.5, 1;
+}
+
+.large-dashed-path {
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 1;
+  stroke-dasharray: 4.5, 1;
+}
+
+.large-overlay-path {
+  fill: none;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 3;
+  stroke-dasharray: 129.76571655273438;
+  stroke-dashoffset: 0;
+}
+
+.large-animated-path {
+  animation: large-dash 1s linear forwards;
+}
+
+@keyframes large-dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 129.76571655273438;
+  }
+}
+/* XL Size Icon */
+.xl-dashed-path-gray {
+  fill: none;
+  stroke: rgba(203, 203, 203, 0.485);
+  stroke-width: 1;
+  stroke-dasharray: 4.5, 1;
+}
+
+.xl-dashed-path {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+  stroke-dasharray: 4.5, 1;
+}
+
+.xl-overlay-path {
+  fill: none;
+  stroke: black;
+  stroke-width: 3;
+  stroke-dasharray: 197;
+  stroke-dashoffset: 0;
+}
+
+.xl-animated-path {
+  animation: xl-dash 1s linear forwards;
+}
+
+@keyframes xl-dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 197;
   }
 }
